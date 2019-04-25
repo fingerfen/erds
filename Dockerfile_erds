@@ -1,0 +1,18 @@
+FROM ubuntu:16.04
+  
+MAINTAINER Nhat Duong <duongn@email.chop.edu>
+
+RUN apt-get update && apt-get install -y bzip2 gcc g++ make python zlib1g-dev wget git-all
+
+
+# set environment
+ENV ERDS_dir=ERDS/erds1.1
+
+# install manta
+
+RUN git clone https://github.com/igm-team/ERDS.git
+#RUN cd /ERDS/erds1.1/hmm && make
+#RUN cd /ERDS/erds1.1/phmm && make
+
+
+
